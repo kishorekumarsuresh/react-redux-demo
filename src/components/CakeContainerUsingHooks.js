@@ -6,7 +6,7 @@ function CakeContainerUsingHooks() {
   const [num,setNum] = useState(1)
   const cake = useSelector(state => state.cake.numOfCakes)
   const buy = useDispatch()
-
+  
   return (
     <div>
       <h2> Number of Cakes - {cake} </h2> 

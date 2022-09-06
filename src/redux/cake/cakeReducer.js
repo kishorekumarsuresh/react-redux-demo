@@ -2,6 +2,7 @@ import { BUY_CAKE } from "./cakeTypes"
 
 const initialState = {
   numOfCakes : 10,
+  numOfCooks : 30,
   
 }
 
