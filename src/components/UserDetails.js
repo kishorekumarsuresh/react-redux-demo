@@ -2,9 +2,10 @@ import React,{useEffect} from 'react'
 import {connect} from 'react-redux'
 import { displayUsers } from '../redux/users/userActions'
 
-function UserDetails({userData, dispatch}) {
+function UserDetails({userData, displayUsers}) {
   useEffect(()=> {
-    dispatch(displayUsers())
+    displayUsers()
+    //dispatch(displayUsers())
   }, [])
   return (
     <div>
@@ -12,7 +13,7 @@ function UserDetails({userData, dispatch}) {
       { userData.users ?
      
         userData.users.map((elem,index)=> <h2 key={index}>
-         <p>{index+1}. {elem.author ? elem.author : 'Kishorekumar'}</p> 
+         <p>{index+1}. {elem.name ? elem.name : 'Kishorekumar'}</p> 
           </h2>) :
 
         <div>
@@ -30,9 +31,9 @@ const mapStateToProps = state => {
     userData : state.user
   }
 }
-// const mapDispatchToProps = dispatch => {
-//   return{
-//     displayUsers : () => dispatch(displayUsers())
-//   }
-// }
-export default connect(mapStateToProps,null) (UserDetails)
+const mapDispatchToProps = dispatch => {
+  return{
+    displayUsers : () => dispatch(displayUsers())
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps) (UserDetails)

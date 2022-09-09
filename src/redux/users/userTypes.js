@@ -1,2 +1,3 @@
 export const SUCCESS_CALL = "SUCCESS_CALL"
 export const FAILURE_CALL = "FAILURE_CALL"
+export const CREATE_USER = "CREATE_USER"

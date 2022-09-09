@@ -1,8 +1,9 @@
-import { SUCCESS_CALL,FAILURE_CALL } from "./userTypes"
+import { SUCCESS_CALL,FAILURE_CALL,CREATE_USER} from "./userTypes"
 
 const initialState = {
   users : [],
   error : '',
+  values : []
 }
 
 const userReducer = (state=initialState,action) => {
@@ -16,6 +17,11 @@ const userReducer = (state=initialState,action) => {
       ...state,
       users : [],
       error : action.payload,
+    }
+    case CREATE_USER: return{
+      ...state,
+      values : action.payload
+  
     }
     default : return state
   }
