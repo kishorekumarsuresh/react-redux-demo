@@ -20,8 +20,10 @@ function Create() {
       <label>Name:</label>
       <input
         type="text"
+        title="Name"
         style={{ width: "29%", height: "30px" }}
         value={entry.name}
+        placeholder="Name"
         onChange={(e) => setEntry({...entry,name:e.target.value})}
        // (e.target.value)}
       />
@@ -30,6 +32,7 @@ function Create() {
         type="text"
         style={{ width: "29%", height: "30px" }}
         value={entry.email}
+        placeholder="E-mail"
         onChange={(e) => setEntry({...entry,email:e.target.value})}
         //setEmail(e.target.value)
       />
@@ -46,10 +49,10 @@ function Create() {
       </select>
       <button
         style={{ width: "22%", height: "30px", marginLeft: "28px" }}
-        onClick={() =>
-          generate(newRegister(entry))
-          //{ name: name, gender: gender, email: email }
-        }
+        // onClick={() =>
+        //   //generate(newRegister(entry))
+        //   //{ name: name, gender: gender, email: email }
+        // }
       >
         submit
       </button>

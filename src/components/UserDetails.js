@@ -9,26 +9,29 @@ function UserDetails({userData, displayUsers}) {
   }, [])
   return (
     <div>
-      UserDetails
+      <span data-testid="quote">UserDetails</span>
+      {console.log('output', userData)}
       { userData.users ?
-     
         userData.users.map((elem,index)=> <h2 key={index}>
          <p>{index+1}. {elem.name ? elem.name : 'Kishorekumar'}</p> 
           </h2>) :
 
         <div>
-        No Data Found - {userData.error}
+        No Data Found 
         </div>
     
 
       }
+      <br></br>
+      error - {userData.error}
     </div>
   )
 }
 
 const mapStateToProps = state => {
   return {
-    userData : state.user
+    userData : state.user,
+    // err : state.error
   }
 }
 const mapDispatchToProps = dispatch => {

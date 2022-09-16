@@ -9,7 +9,6 @@ function NewsApp() {
   useEffect(()=>{
     dispatch(getNews())
   },[])
-  //console.log(news.news,'daaaaataaaaa')
   return (
     <div>
       NewsApp...!
@@ -18,7 +17,7 @@ function NewsApp() {
         news.news.map((val,ind)=>
           <div key={ind}>
           <h4 > headlines</h4>
-          <h1>Title: {val.title}</h1>
+          <h1>Title: {(val.author)? val.author: "Kishore"}</h1>
           </div>
         ):
         <>

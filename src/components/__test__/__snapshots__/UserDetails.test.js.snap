@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Userdetails Component checking api success call  1`] = `
+<div>
+  <span
+    data-testid="quote"
+  >
+    UserDetails
+  </span>
+  <h2>
+    <p>
+      1
+      . 
+      Jenni2
+    </p>
+  </h2>
+  <br />
+  error - 
+</div>
+`;
+
+exports[`Userdetails Component checking err msg in screen 1`] = `
+<div>
+  <span
+    data-testid="quote"
+  >
+    UserDetails
+  </span>
+  <br />
+  error - 
+</div>
+`;
